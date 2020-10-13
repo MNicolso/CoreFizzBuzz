@@ -1,0 +1,49 @@
+﻿<h1>FizzBuzz</h1>
+<style>
+    .outPut {
+        word-wrap: break-word;
+    }
+</style>
+
+
+<form asp-controller="Home" asp-action="Solve">
+    <div class="row">
+        <div class="col">
+            <div class="container">MIN:</div>
+            <input class="alert-secondary" id="min" name="minInput" value="1" />
+        </div>
+        <div class="col">
+            <div class="container">FIZZ:</div>
+            <input class="alert-secondary" id="fizz" name="fizzInput" value="3" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="container">MAX:</div>
+            <input class="alert-secondary" id="max" name="maxInput" value="100" />
+        </div>
+        <div class="col">
+            <div class="container">BUZZ:</div>
+            <input class="alert-secondary" id="buzz" name="buzzInput" value="5" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col offset-4">
+            <button>CARBONATE IT</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Fizz and Buzzified!
+
+        </div>
+    </div>
+    <div class="row outPut">
+        <div class="col-4">
+            @ViewData["Result"]
+
+        </div>
+    </div>
+
+</form>
